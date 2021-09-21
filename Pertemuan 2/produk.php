@@ -9,6 +9,13 @@ class Produk{
             $penerbit = "penerbit",
             $harga = 0;
 
+    public function __construct( $judul, $penerbit, $penulis, $harga) {
+        $this->judul = $judul;
+        $this->penulis = $penulis;
+        $this->penerbit = $penerbit;
+        $this->harga = $harga;
+    }
+
     public function sayHello(){
         return "Hello World!";
 
