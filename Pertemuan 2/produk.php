@@ -4,12 +4,12 @@
 // Komik
 // game
 class Produk{
-    public $judul = "judul",
-            $penulis = "penulis",
-            $penerbit = "penerbit",
-            $harga = 0;
+    public $judul,
+            $penulis,
+            $penerbit,
+            $harga;
 
-    public function __construct( $judul, $penerbit, $penulis, $harga) {
+    public function __construct( $judul = "judul", $penerbit = "penerbit", $penulis = "penulis", $harga = 0) {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
