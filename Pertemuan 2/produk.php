@@ -3,32 +3,28 @@
 // jualanProduk
 // Komik
 // game
-class Produk{
-    public $judul,
-            $penulis,
-            $penerbit,
-            $harga;
+class Produk {
+    public $judul = "judul",
+            $penulis = "penulis", 
+            $penerbit = "penerbit",
+            $harga = 0;
+ 
 
-    public function __construct( $judul = "judul", $penerbit = "penerbit", $penulis = "penulis", $harga = 0) {
-        $this->judul = $judul;
-        $this->penulis = $penulis;
-        $this->penerbit = $penerbit;
-        $this->harga = $harga;
-    }
-
-    public function sayHello(){
-        return "Hello World!";
-
+    public function getLabel(){
+        return "$this->penulis, $this->penerbit";
     }
 }
 
-$produk1 = new Produk("Naruto", "Sasuke", "Sakura", "Kakashi", 30000);
-$produk2 = new Produk("upin", "ipin", "fizi", "bu jupronagh", 60000);
+// $produk1 = new Produk("Naruto", "Sasuke", "Sakura", "Kakashi", 30000);
+// $produk2 = new Produk("upin", "ipin", "fizi", "bu jupronagh", 60000);
 
+$produk3 = new Produk();
+$produk3->judul = "Naruto";
+$produk3->penulis = "Masashi Kishimoto";
+$produk3->penerbit = "Shonen Jump";
+$produk3->harga = 30000;
 
-
-echo "Komik : " . $produk1->getLabel();
+echo "Komik :$produk3->penulis, $produk3->penerbit";
 echo "<br>";
-echo "Game : " . $produk2->getLabel();
-
+echo $produk3->getLabel();
 ?>
